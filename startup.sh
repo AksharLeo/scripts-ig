@@ -1,6 +1,6 @@
 #!/bin/bash
 if (( $EUID != 0 )); then
-    sudo /home/aksharleo/scripts/startup.sh
+    sudo /home/aksharleo/startup.sh
     exit
 fi
 apt update
