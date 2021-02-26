@@ -6,7 +6,7 @@ hm = int(input('''
             1 - new install
             2 - install omf
             3 - do both
-            
+            4 - exit
             '''))
 
 new_install = '''
@@ -54,6 +54,8 @@ elif hm == 2:
 elif hm == 3:
     os.system(new_install)
     os.system(install_omf)
+elif hm == 4:
+    exit
 else:
     print('please enter a valid input')
 exit
