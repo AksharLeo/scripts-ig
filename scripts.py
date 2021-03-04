@@ -28,6 +28,7 @@ new_install = '''
             sudo apt install brave-browser -y
             sudo apt-get install libcurl4-openssl-dev
             sudo apt-get install pkg-config
+            sudo apt install libevent-dev
             sudo apt-get update && sudo apt-get install spotify-client -y
             sudo apt-get install gtk2-engines-murrine gtk2-engines-pixbuf git
 
