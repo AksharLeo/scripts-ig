@@ -1,4 +1,17 @@
-@echo off    
+@echo off
+if _%1_==_payload_  goto :payload
+
+:getadmin
+    echo %~nx0: elevating self
+    set vbs=%temp%\getadmin.vbs
+    echo Set UAC = CreateObject^("Shell.Application"^)                >> "%vbs%"
+    echo UAC.ShellExecute "%~s0", "payload %~sdp0 %*", "", "runas", 1 >> "%vbs%"
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+goto :eof
+
+:payload
+    
 del /s /f /q %windir%\temp\*.*    
 rd /s /q %windir%\temp    
 md %windir%\temp    
@@ -32,6 +45,8 @@ md "%USERPROFILE%\Cookies"
 del C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Recent Items*.* /Q pause
 
 ipconfig/flushdns
-echo <0x1b>[35mHMMMMM<0x1b[1m
+echo.
+echo...Script Complete....
+echo.
 
-cmd/k
+pause
