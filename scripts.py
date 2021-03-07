@@ -48,7 +48,7 @@ install_omf = '''
                 curl -L https://get.oh-my.fish > install
                 fish install --path=~/.local/share/omf --config=~/.config/omf -y
                 bb1f4025934600ea6feef2ec11660e17e2b6449c5a23c033860aed712ad328c9 install -y
-                apt install sashimi'''
+                omf install sashimi'''
             
 if   hm == 1:
     os.system(new_install)
