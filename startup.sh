@@ -3,7 +3,8 @@ if (( $EUID != 0 )); then
     sudo $HOME/startup.sh
     exit
 fi
-apt update
+apt-smart-a
+apt update --fix-missing
 apt -y upgrade
 apt-get -y dist-upgrade
 apt clean
