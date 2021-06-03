@@ -2,7 +2,7 @@ import os
 
 
 os.system('''
-			pip install apt-smart -y
+			pip install apt-smart
 			apt-smart -a
 			sudo apt update
 			sudo apt install apt-transport-https curl gnupg -y
